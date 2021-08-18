@@ -108,7 +108,6 @@ def detect(path):
     rectangles = model.detectFace(temp_img, threshold)
 
     draw = img.copy()
-    print(rectangles.shape)
     for rectangle in rectangles:
         cv2.rectangle(draw, (int(rectangle[0]), int(rectangle[1])), (int(rectangle[2]), int(rectangle[3])), (0, 255, 0),2)
         # do_mosaic(draw1, int(rectangle[0]), int(rectangle[1]), W, H, 9)
